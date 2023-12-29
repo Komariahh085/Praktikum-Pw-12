@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function image_picker(){
+            const list_gambar = ["bunga anggrek.jpg", "bunga matahari .jpg", "bunga tulip.jpg"];
+            let pilihan = document.getElementById("option").value;
+
+            if(pilihan == "bunga anggrek"){
+                let select = list_gambar[0];
+                document.getElementById("gambar").src = "images/${select}"
+            }
+            if(pilihan == "bunga matahari"){
+                let select = list_gambar[1];
+                document.getElementById("gambar").src = "images/${select};"
+            }
+            if(pilihan == "bunga tulip"){
+                let select = list_gambar[2];
+                document.getElementById("gambar").src = "images/${select};"
+            }
+        }
+    </script>
+    <style>
+        .container{
+            background-color: white;
+
+            background-color: white;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 30px;
+            width: 200px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Picker</h1>
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="bunga anggrek">Bunga Anggrek</option>
+        <option value="bunga matahari">Bunga Matahari</option>
+        <option value="bunga tulip">Bunga Tulip</option>
+    </select>
+    <br>
+    <br>
+    <div class="container">
+        <img id="gambar" width="200px">
+    </div>
+</body>
+</html> 
